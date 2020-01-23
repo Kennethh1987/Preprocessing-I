@@ -164,6 +164,7 @@ body {
 	width: 800px;
 	margin: 0 auto;
 
+
 }
 
 
@@ -172,6 +173,12 @@ nav {
 	display: flex;
 	justify-content: space-around;
 	
+	@media( max-width: 500px ) {
+		flex-direction: column;
+		align-items: center;
+		width: 50%;
+	}//nav media querie
+
 
 	a {
 		font-size: 1.9rem;
@@ -186,6 +193,13 @@ nav {
 .infome {
 	display: flex;
 	margin-top: 5%;
+
+
+	@media( max-width: 500px ) {
+		flex-direction: column;
+		align-items: center;
+		width: 50%;
+	}//infome media queries
 
 
 	h1 {
@@ -209,27 +223,46 @@ nav {
 	display: flex;
 	max-width: 100%;
 	margin-top: 10%;
-
+	.bordered();
+	font-family:@p-font;
+	
+	@media( max-width: 500px ) {
+		flex-direction: column;
+		align-items: center;
+		width: 50%;
+		.skipow{
+			border-right: 1px solid black;
+			border-top: 1px solid black;
+			margin-top: 2%;
+		}
+	}//Mid media querie closes 
 
 	h3 {
-		font-size: 3rem;
-	}
+		font-size: 2rem;
+		color: navy;
+	}//endsh3
 
 	p {
-		font-size: 2rem;
-	}
+		margin: 0 1% 0 1%;
+		font-size: 1.5rem;
+	}//endsp
 
 	.cyclops {
 		width: 50%;
-	}
+		border-right: 2px solid black;
+		text-align: center;
+	
+	}//cyclops paragraph
 
 	.skipow {
-		justify-content: space-around;
+		text-align: center;
+	
 
 		width: 50%;
 
 		h2 {
-			font-size: 3rem;
+			font-size: 2rem;
+			margin: 2%;
 		}//Skills and power header ends
 
 		
@@ -239,29 +272,63 @@ nav {
 		ul {
 
 			li {
-				font-size: 2rem;
+				margin: 0 1% 0 1%;
+			
+				font-size: 1.5rem;
 			}//skills and power list ends
 
 			
 
 
-		}
+		}//mid title
 
-		//mid title
+		
 
-		//Mid paragraphs end
-	}
+		
+	}//Mid paragraphs end
 }//Mid content ends
 
 
 
 .bottom {//Bottom Content Begins
 	margin: 10%;
+	max-width: 100%;
+	display: flex;
+
+	@media( max-width: 500px ) {
+		flex-direction: column;
+		align-items: center;
+		width: 50%;
+	}//media queries bottom
 
 
 
+.history{
+	font-size: 2rem;
+}
+li{
+	font-size: 1.7rem;
+}
 
 
-}//Bottom ends
+}//bottom ends
 
+//starts contact page
+#contact{
+	display: flex;
+	font-size: 1.5rem;
+	text-align: center;
+
+
+address{
+	font-size: 1.5rem;
+}//ends address
+
+
+}//ends contact page
+
+//media quries
+@media (max-width: 500px) {
+    font-size: 0.8rem;
+  }
 

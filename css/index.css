@@ -144,12 +144,26 @@ nav {
   display: flex;
   justify-content: space-around;
 }
+@media (max-width: 500px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+  }
+}
 nav a {
   font-size: 1.9rem;
 }
 .infome {
   display: flex;
   margin-top: 5%;
+}
+@media (max-width: 500px) {
+  .infome {
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+  }
 }
 .infome h1 {
   margin-left: 10%;
@@ -159,26 +173,74 @@ nav a {
   display: flex;
   max-width: 100%;
   margin-top: 10%;
+  border-top: 1px solid black;
+  border-bottom: 1px solid red;
+  margin: 3%;
+  font-family: 'Anton', sans-serif;
+}
+@media (max-width: 500px) {
+  .midsec {
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+  }
+  .midsec .skipow {
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    margin-top: 2%;
+  }
 }
 .midsec h3 {
-  font-size: 3rem;
+  font-size: 2rem;
+  color: navy;
 }
 .midsec p {
-  font-size: 2rem;
+  margin: 0 1% 0 1%;
+  font-size: 1.5rem;
 }
 .midsec .cyclops {
   width: 50%;
+  border-right: 2px solid black;
+  text-align: center;
 }
 .midsec .skipow {
-  justify-content: space-around;
+  text-align: center;
   width: 50%;
 }
 .midsec .skipow h2 {
-  font-size: 3rem;
+  font-size: 2rem;
+  margin: 2%;
 }
 .midsec .skipow ul li {
-  font-size: 2rem;
+  margin: 0 1% 0 1%;
+  font-size: 1.5rem;
 }
 .bottom {
   margin: 10%;
+  max-width: 100%;
+  display: flex;
+}
+@media (max-width: 500px) {
+  .bottom {
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+  }
+}
+.bottom .history {
+  font-size: 2rem;
+}
+.bottom li {
+  font-size: 1.7rem;
+}
+#contact {
+  display: flex;
+  font-size: 1.5rem;
+  text-align: center;
+}
+#contact address {
+  font-size: 1.5rem;
+}
+@media (max-width: 500px) {
+  font-size: 0.8rem;
 }
