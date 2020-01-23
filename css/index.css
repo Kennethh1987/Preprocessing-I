@@ -133,7 +133,37 @@ table {
 html,
 body {
   height: 100%;
+  font-size: 62.5%;
+  font-family: 'Oswald', sans-serif;
 }
-body {
-  background-color: red;
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+}
+nav a {
+  font-size: 1.9rem;
+}
+.infome {
+  display: flex;
+  margin-top: 5%;
+}
+.infome h1 {
+  margin-left: 10%;
+  font-size: 3rem;
+}
+.midsec h3 {
+  font-size: 3rem;
+}
+.midsec p {
+  font-size: 2rem;
+}
+.bottom {
+  margin: 10%;
+}
+.bottom h3 {
+  font-size: 3rem;
 }
