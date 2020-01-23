@@ -155,15 +155,30 @@ nav a {
   margin-left: 10%;
   font-size: 3rem;
 }
+.midsec {
+  display: flex;
+  max-width: 100%;
+  margin-top: 10%;
+}
 .midsec h3 {
   font-size: 3rem;
 }
 .midsec p {
   font-size: 2rem;
 }
+.midsec .cyclops {
+  width: 50%;
+}
+.midsec .skipow {
+  justify-content: space-around;
+  width: 50%;
+}
+.midsec .skipow h2 {
+  font-size: 3rem;
+}
+.midsec .skipow ul li {
+  font-size: 2rem;
+}
 .bottom {
   margin: 10%;
-}
-.bottom h3 {
-  font-size: 3rem;
 }
