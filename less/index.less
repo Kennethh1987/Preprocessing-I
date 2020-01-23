@@ -4,19 +4,87 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -24,25 +92,44 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 }
-ol, ul {
+
+ol,
+ul {
 	list-style: none;
 }
-blockquote, q {
+
+blockquote,
+q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -50,10 +137,198 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+html,
+body {
+	height: 100%;
+	font-size: 62.5%;
+	font-family: @main-font;
+
 }
+
+//mixins
+.bordered() {
+	border-top: 1px solid black;
+	border-bottom: 1px solid red;
+	margin: 3%;
+
+}
+
+//variables
+@main-font: 'Oswald', sans-serif;
+@p-font: 'Anton', sans-serif;
+
+.container {
+	width: 800px;
+	margin: 0 auto;
+
+
+}
+
+
+//nav begins
+nav {
+	display: flex;
+	justify-content: space-around;
+	
+	@media( max-width: 500px ) {
+		flex-direction: column;
+		align-items: center;
+		width: 50%;
+	}//nav media querie
+
+
+	a {
+		font-size: 1.9rem;
+
+
+	}
+
+	//Nav A links end
+}
+
+//header text begins
+.infome {
+	display: flex;
+	margin-top: 5%;
+
+
+	@media( max-width: 500px ) {
+		flex-direction: column;
+		align-items: center;
+		width: 50%;
+	}//infome media queries
+
+
+	h1 {
+		margin-left: 10%;
+		font-size: 3rem;
+
+	}
+
+	//cyclops name ends
+
+
+}
+
+//infome ends
+
+//header text ends
+
+//nav ends
+//Mid begins
+.midsec {
+	display: flex;
+	max-width: 100%;
+	margin-top: 10%;
+	.bordered();
+	font-family:@p-font;
+	
+	@media( max-width: 500px ) {
+		flex-direction: column;
+		align-items: center;
+		width: 50%;
+		.skipow{
+			border-right: 1px solid black;
+			border-top: 1px solid black;
+			margin-top: 2%;
+		}
+	}//Mid media querie closes 
+
+	h3 {
+		font-size: 2rem;
+		color: navy;
+	}//endsh3
+
+	p {
+		margin: 0 1% 0 1%;
+		font-size: 1.5rem;
+	}//endsp
+
+	.cyclops {
+		width: 50%;
+		border-right: 2px solid black;
+		text-align: center;
+	
+	}//cyclops paragraph
+
+	.skipow {
+		text-align: center;
+	
+
+		width: 50%;
+
+		h2 {
+			font-size: 2rem;
+			margin: 2%;
+		}//Skills and power header ends
+
+		
+
+
+
+		ul {
+
+			li {
+				margin: 0 1% 0 1%;
+			
+				font-size: 1.5rem;
+			}//skills and power list ends
+
+			
+
+
+		}//mid title
+
+		
+
+		
+	}//Mid paragraphs end
+}//Mid content ends
+
+
+
+.bottom {//Bottom Content Begins
+	margin: 10%;
+	max-width: 100%;
+	display: flex;
+
+	@media( max-width: 500px ) {
+		flex-direction: column;
+		align-items: center;
+		width: 50%;
+	}//media queries bottom
+
+
+
+.history{
+	font-size: 2rem;
+}
+li{
+	font-size: 1.7rem;
+}
+
+
+}//bottom ends
+
+//starts contact page
+#contact{
+	display: flex;
+	font-size: 1.5rem;
+	text-align: center;
+
+
+address{
+	font-size: 1.5rem;
+}//ends address
+
+
+}//ends contact page
+
+//media quries
+@media (max-width: 500px) {
+    font-size: 0.8rem;
+  }
 
